@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Calais integration get semantic tags on a node </shortname>
+  <description>Gets semantic tags assigned to a doc or folder node</description>
+  <url>/semantics/nodeSemanticTags?noderef={nodeRef}</url>
+  <format default="xml">argument</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

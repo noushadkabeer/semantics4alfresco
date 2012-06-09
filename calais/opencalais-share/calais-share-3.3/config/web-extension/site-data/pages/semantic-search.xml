@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<page>
+   <title>Search</title>
+   <title-id>page.search.title</title-id>
+   <description>Search view modified for semantic tag category search</description>
+   <description-id>page.search.description</description-id>
+   <template-instance>semantic-search</template-instance>
+   <authentication>user</authentication>
+</page>

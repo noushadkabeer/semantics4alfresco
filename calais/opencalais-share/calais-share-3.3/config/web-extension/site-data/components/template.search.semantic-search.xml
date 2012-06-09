@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<component>
+   <scope>template</scope>
+   <region-id>search</region-id>
+   <source-id>semantic-search</source-id>
+   <url>/components/semantic-search/search</url>
+   <properties></properties>
+</component>

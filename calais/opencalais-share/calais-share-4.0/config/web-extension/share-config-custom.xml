@@ -1,0 +1,45 @@
+<alfresco-config>
+
+   <!-- show semantic tags in doc details -->
+   <config  evaluator="node-type" condition="cm:content">
+      <forms>
+         <form>
+            <field-visibility>
+               <show id="semantic:taggable" for-mode="view" />
+            </field-visibility>
+         </form>
+      </forms>
+   </config>
+   
+   <!-- Document Library Custom Code config section -->
+   <config evaluator="string-compare" condition="DocLibCustom">
+         <dependencies>
+            <js src="components/auto-tag/auto-tag-action.js" />
+         </dependencies>
+   </config>      
+   
+   <!-- Document Library Actions config section -->
+   <config evaluator="string-compare" condition="DocLibActions">
+
+      <actions>   
+         <action id="semantic-auto-tag" type="javascript" label="actions.document.autotag" icon="auto-tag">
+            <param name="function">onActionAutoTag</param>
+            <permissions>
+               <permission allow="true">Write</permission>
+            </permissions>
+            <evaluator negate="true">evaluator.doclib.action.isLocked</evaluator>            
+         </action>         
+      </actions>   
+
+      <actionGroups>
+         <actionGroup id="document-browse">
+            <action index="900" id="semantic-auto-tag" />
+         </actionGroup>
+         <actionGroup id="document-details">
+            <action index="900" id="semantic-auto-tag" />
+         </actionGroup>
+      </actionGroups>
+
+   </config>
+
+</alfresco-config>

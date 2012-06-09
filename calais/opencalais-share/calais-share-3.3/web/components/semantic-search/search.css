@@ -1,0 +1,50 @@
+.search
+{
+	margin: 0 -10px;
+}
+
+.search .yui-dt table
+{
+	width: 100%;
+	border: none;
+}
+
+.search .yui-dt table thead
+{
+	display: none;
+}
+
+.search .results
+{
+   margin-right: 1px;
+}
+
+.search .resultbar
+{ 
+	padding: 8px 10px;
+	border-bottom: 1px solid #F0F3F4;
+	border-top: 1px solid #F0F3F4;
+	height: 1.25em;
+}
+
+.search .itemname a
+{
+   font-size: 116%;
+}
+
+.search tr.yui-dt-odd, tr.yui-dt-even
+{
+   background-color: #ffffff !important;
+}
+
+.search .yui-dt td
+{
+   border-bottom: 1px dashed #D7D7D7;
+}
+
+.search .results .details span.tags
+{
+   background-image: url(images/tag-16.png);
+   background-position: 0px 2px;
+   background-repeat: no-repeat;
+}

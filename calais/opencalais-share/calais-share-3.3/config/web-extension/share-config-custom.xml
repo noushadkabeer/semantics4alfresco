@@ -1,0 +1,14 @@
+<alfresco-config>
+
+   <!-- show semantic tags in doc details -->
+   <config  evaluator="node-type" condition="cm:content">
+      <forms>
+         <form>
+            <field-visibility>
+               <show id="semantic:taggable" for-mode="view" />
+            </field-visibility>
+         </form>
+      </forms>
+   </config>
+
+</alfresco-config>

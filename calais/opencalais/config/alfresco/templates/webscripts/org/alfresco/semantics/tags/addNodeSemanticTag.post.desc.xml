@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Calais integration add semantic tag</shortname>
+  <description>Add an existing semantic tag to a node</description>
+  <url>/semantics/addNodeSemanticTag?noderef={nodeRef}&amp;tagnoderef={tagNodeRef}</url>
+  <format default="xml"/>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>
