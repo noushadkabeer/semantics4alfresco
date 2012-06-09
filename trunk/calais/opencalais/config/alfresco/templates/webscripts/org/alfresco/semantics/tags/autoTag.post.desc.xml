@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Calais integration auto-tag</shortname>
+  <description>Uses calais service to automatically semantically tag node, and/or save rdf/json metadata content</description>
+  <url>/semantics/autoTag?noderef={nodeRef}&amp;key={calaisKey}&amp;autoTag={doAutoTag?}&amp;saveRDF={doSaveRDF?}&amp;saveJSON={doSaveJSON?}</url>
+  <format default="xml">argument</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

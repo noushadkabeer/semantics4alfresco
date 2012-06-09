@@ -1,0 +1,39 @@
+<alfresco-config>
+
+	
+
+
+<config evaluator="aspect-name"
+		condition="semantic:taggable">
+		<property-sheet>
+			<show-property name="semantic:taggable" />
+		</property-sheet>
+	</config>
+	
+	<config evaluator="aspect-name"
+		condition="semantic:RDF">
+		<property-sheet>
+			<show-property name="semantic:RDFcontent" />
+		</property-sheet>
+	</config>
+	
+		<config evaluator="aspect-name"
+		condition="semantic:CalaisSimple">
+		<property-sheet>
+			<show-property name="semantic:CalaisSimpleContent" />
+		</property-sheet>
+	</config>
+	
+	<config evaluator="string-compare" condition="Action Wizards">
+		<aspects>
+			<aspect name="semantic:RDF" />
+			<aspect name="semantic:taggable" />
+		</aspects>
+		<action-handlers>
+			<handler name="calaisAction"
+				class="org.alfresco.semantics.calais.CalaisActionHandler" />
+		</action-handlers>
+	</config>
+
+
+</alfresco-config>

@@ -1,0 +1,9 @@
+<webscript>
+  <shortname>autotag</shortname>
+  <description>Document List Action - Auto Tag</description>
+  <url>/slingshot/doclib/action/autotag/site/{site}/{container}</url>
+  <url>/slingshot/doclib/action/autotag/site/{container}</url>  
+  <format default="json">argument</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

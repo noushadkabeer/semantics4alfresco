@@ -1,0 +1,8 @@
+<webscript>
+   <shortname>Calais integration get tag suggestion list</shortname>
+   <description>Gets list of suggested semantic tags based on running Calais service on node content</description>
+   <url>/semantics/tagSuggestList?noderef={nodeRef}&amp;key={calaisKey?}</url>
+   <format default="xml"/>
+   <authentication>user</authentication>
+   <transaction>required</transaction>
+</webscript>

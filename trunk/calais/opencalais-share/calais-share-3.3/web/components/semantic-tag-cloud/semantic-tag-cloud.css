@@ -1,0 +1,27 @@
+.semantic-tag-cloud .tag
+{
+	display: inline-block;
+	padding: 0.2em;
+}
+
+.semantic-tag-cloud .refresh
+{
+   background-image: url(images/refresh.png);
+   background-repeat: no-repeat;
+   float: right;
+   height: 16px;
+   left: -8px;
+   position: relative;
+   top: -22px;
+   width: 16px;
+}
+
+.semantic-tag-cloud .refresh a,
+.semantic-tag-cloud .refresh a:active,
+.semantic-tag-cloud .refresh a:hover
+{
+   display: block;
+   height: 16px;
+   text-decoration: none;
+   width: 16px;
+}

@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Calais integration add new semantic tag</shortname>
+  <description>Add a new semantic tag, optionally also adds semantic tag to to a node</description>
+  <url>/semantics/addNewSemanticTag?tagname={tagName}&amp;semanticCat={semanticCategoryName}&amp;noderef={nodeRef?}&amp;normalized={normalizedName?}&amp;latitude={latitude?}&amp;longitude={longitude?}&amp;uri={linkedDataURI?}&amp;website={website?}&amp;ticker={stockTicker?}</url>
+  <format default="xml"/>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>
