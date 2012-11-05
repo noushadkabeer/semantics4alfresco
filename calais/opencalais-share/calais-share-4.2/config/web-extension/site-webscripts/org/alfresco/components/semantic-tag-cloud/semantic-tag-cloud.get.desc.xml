@@ -1,0 +1,6 @@
+<webscript>
+   <shortname>Semantic Tag Cloud</shortname>
+   <description>Displays a cloud of all semantic tags for one category or all categories</description>
+   <family>dashlet</family>
+   <url>/components/semantic-tag-cloud/semantic-tag-cloud</url>
+</webscript>
