@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+
+<project name="SDK Demo AMP Build File" default="package-amp" basedir=".">
+	
+    <property name="project.dir" value="."/>
+    <property name="build.dir" value="${project.dir}/build"/>
+    <property name="config.dir" value="${project.dir}/config"/>
+    <property name="jar.file" value="${build.dir}/lib/stanbolIntegration.jar"/>
+    <property name="amp.file" value="${build.dir}/dist/stanbolIntegration.amp"/>
+	
+    <target name="mkdirs">
+        <mkdir dir="${build.dir}/dist" />
+        <mkdir dir="${build.dir}/lib" />
+    </target>
+    
+    <path id="class.path">
+        <dirset dir="${build.dir}" />
+        <fileset dir="lib" includes="**/*.jar"/>
+    	<fileset dir="C:/alfresco/install/4.0.e/tomcat/webapps/alfresco/WEB-INF/lib" includes="**/*.jar" />
+    </path>
+
+    <target name="compile">
+        <mkdir dir="${build.dir}/classes" />
+        <javac classpathref="class.path" srcdir="${project.dir}/src" destdir="${build.dir}/classes" debug="true" encoding="iso-8859-1" />
+    </target>
+    
+    <target name="package-jar" depends="compile">
+        <jar destfile="${jar.file}" >
+            <fileset dir="${build.dir}/classes" excludes="**/custom*,**/*Test*" includes="**/*.class" />
+        </jar>
+    </target>
+	
+	<target name="copy-jar" depends="package-jar" description="Copy jar to alfresco lib" >
+		<copy todir="c:/alfresco/install/4.0.e/tomcat/webapps/alfresco/WEB-INF/lib" file="${jar.file}" />
+	</target>	
+	
+    <target name="package-amp" depends="mkdirs, package-jar" description="Package the Module" >
+        <zip destfile="${amp.file}" >
+        	<fileset dir="${project.dir}" includes="lib/*.jar" />
+            <fileset dir="${project.dir}/build" includes="lib/*.jar" />
+            <fileset dir="${project.dir}" includes="config/**/*.*" excludes="**/module.properties" />
+            <fileset dir="${project.dir}/config/alfresco/module/stanbol" includes="module.properties,config/**/*.*" />
+        </zip>
+    </target>
+
+    <target name="update-war" depends="package-amp" description="Update the WAR file.  Set -Dwar.file=..." >
+        <echo>Installing Stanbol Integration AMP into WAR</echo>
+        <java dir="." fork="true" classname="org.alfresco.repo.module.tool.ModuleManagementTool">
+            <classpath refid="class.path" />
+            <arg line="install ${amp.file} c:/alfresco/install/4.0.e/tomcat/webapps/alfresco.war -force -verbose"/>
+        </java>
+    </target>
+
+</project>

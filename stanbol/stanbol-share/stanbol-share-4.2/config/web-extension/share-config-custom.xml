@@ -1,0 +1,45 @@
+<alfresco-config>
+
+   <!-- show semantic tags in doc details -->
+   <config  evaluator="node-type" condition="cm:content">
+      <forms>
+         <form>
+            <field-visibility>
+               <show id="semantic2:taggable" for-mode="view" />
+            </field-visibility>
+         </form>
+      </forms>
+   </config>
+   
+   <!-- Document Library Custom Code config section -->
+   <config evaluator="string-compare" condition="DocLibCustom">
+         <dependencies>
+            <js src="components/stanbol/auto-tag/auto-tag-action.js" />
+         </dependencies>
+   </config>      
+   
+   <!-- Document Library Actions config section -->
+   <config evaluator="string-compare" condition="DocLibActions">
+
+      <actions>   
+         <action id="stanbol-semantic-auto-tag" type="javascript" label="actions.document.stanbol-autotag" icon="stanbol-auto-tag">
+            <param name="function">onActionStanbolAutoTag</param>
+            <permissions>
+               <permission allow="true">Write</permission>
+            </permissions>
+            <evaluator negate="true">evaluator.doclib.action.isLocked</evaluator>            
+         </action>         
+      </actions>   
+
+      <actionGroups>
+         <actionGroup id="document-browse">
+            <action index="910" id="stanbol-semantic-auto-tag" />
+         </actionGroup>
+         <actionGroup id="document-details">
+            <action index="910" id="stanbol-semantic-auto-tag" />
+         </actionGroup>
+      </actionGroups>
+
+   </config>
+
+</alfresco-config>

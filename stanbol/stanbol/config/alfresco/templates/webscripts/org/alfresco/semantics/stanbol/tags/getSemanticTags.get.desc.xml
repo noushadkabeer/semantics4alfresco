@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Stanbol integration get semantic tags</shortname>
+  <description>Get semantic tags (for all or one semantic cateogry) on a particular node or on all nodes</description>
+  <url>/semantics/stanbol/getSemanticTags?noderef={nodeRef}&amp;semanticCat={semanticCategory?}&amp;max={maxResults?}&amp;site={shareSiteId?}</url>
+  <format default="xml"/>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

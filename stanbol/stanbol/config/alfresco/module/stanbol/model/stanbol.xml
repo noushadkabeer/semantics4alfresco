@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+
+<model name="semantic2:semantic"
+	xmlns="http://www.alfresco.org/model/dictionary/1.0">
+	<!-- Definition of the model -->
+
+	<description>Semantic</description>
+	<author></author>
+	<version>1.0</version>
+
+	<!-- Imports are required to allow references to definitions in other models -->
+	<imports>
+		<!-- Import Alfresco Definitions -->
+		<import uri="http://www.alfresco.org/model/dictionary/1.0"
+			prefix="d" />
+		<import uri="http://www.alfresco.org/model/content/1.0"
+			prefix="cm" />
+		<import uri="http://www.alfresco.org/model/application/1.0"
+			prefix="app" />
+		<import uri="http://www.alfresco.org/model/wcmmodel/1.0"
+			prefix="wcm" />
+		<import uri="http://www.alfresco.org/model/forum/1.0"
+			prefix="fm" />
+		<import uri="http://www.alfresco.org/model/bpm/1.0"
+			prefix="bpm" />
+	</imports>
+
+	<!-- Introduction of new namespaces defined by this model -->
+	<namespaces>
+		<namespace
+			uri="http://www.alfresco.org/model/content/semantic/2.0"
+			prefix="semantic2" />
+	</namespaces>
+
+	<constraints>		
+	</constraints>
+
+	<types></types>
+
+<aspects>
+
+<aspect name="semantic2:taggable">
+<title>Taggable</title>
+         <parent>cm:classifiable</parent>
+         <properties>
+            <property name="semantic2:taggable">
+               <title>Semantic Tags</title>
+               <type>d:category</type>
+               <mandatory>false</mandatory>
+               <multiple>true</multiple>
+               <index enabled="true">
+                  <atomic>true</atomic>
+                  <stored>true</stored>
+                  <tokenised>false</tokenised>
+               </index>
+            </property>         
+         </properties>
+</aspect>
+
+<aspect name="semantic2:category">
+<title>Semantic Properties for Category</title>
+         <parent></parent>
+         <properties>
+            <property name="semantic2:URI">
+               <title>URI</title>
+               <type>d:text</type>
+            </property> 
+            <property name="semantic2:latitude">
+               <title>Latitude</title>
+               <type>d:double</type>
+            </property>    
+             <property name="semantic2:longitude">
+               <title>Longitude</title>
+               <type>d:double</type>
+            </property>      
+            <property name="semantic2:webaddress">
+               <title>Web Address</title>
+               <type>d:text</type>
+            </property> 
+         </properties>
+</aspect>
+
+
+</aspects>
+
+</model>

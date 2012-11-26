@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Stanbol integration auto-tag</shortname>
+  <description>Uses Apache Stanbol to automatically semantically tag node</description>
+  <url>/semantics/stanbol/autoTag?noderef={nodeRef}</url>
+  <format default="xml">argument</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

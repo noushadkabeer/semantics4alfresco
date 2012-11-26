@@ -1,0 +1,8 @@
+<webscript>
+   <shortname>search</shortname>
+   <description>Site Search Component Data Webscript modified to support semantics category search</description>
+   <url>/semantics/stanbol/search?term={term?}&amp;tag={tag?}&amp;semanticTag={semanticTag?}&amp;semanticCategory={semanticCategory?}&amp;site={site?}&amp;container={container?}&amp;sort={sort?}&amp;query={query?}</url>
+   <format default="json">argument</format>
+   <authentication>user</authentication>
+   <transaction allow="readonly">required</transaction>
+</webscript>

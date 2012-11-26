@@ -1,0 +1,12 @@
+<alfresco-config>
+
+
+<config evaluator="aspect-name"
+		condition="semantic2:taggable">
+	<property-sheet>
+		<show-property name="semantic2:taggable" />
+	</property-sheet>
+</config>
+
+
+</alfresco-config>

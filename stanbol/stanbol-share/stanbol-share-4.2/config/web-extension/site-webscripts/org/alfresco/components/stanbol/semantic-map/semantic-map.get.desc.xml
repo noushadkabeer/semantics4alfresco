@@ -1,0 +1,7 @@
+<webscript>
+   <shortname>Stanbol Semantic Map</shortname>
+   <description>Display a google map with markers for geo-tagged semantic entities</description>
+   <authentication>user</authentication>
+   <family>dashlet</family>
+   <url>/components/stanbol/semantic-map/semantic-map</url>
+</webscript>
