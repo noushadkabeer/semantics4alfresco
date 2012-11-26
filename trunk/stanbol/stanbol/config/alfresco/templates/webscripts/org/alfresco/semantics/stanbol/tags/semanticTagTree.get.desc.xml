@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Semantic category tree data</shortname>
+  <description>Gets one level of category tree data, the sub-category children for given category, use noderef "rootCategory" to get first level</description>
+  <url>/semantics/stanbol/semanticTagTree?noderef={nodeRef}</url>
+  <format default="xml">argument</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

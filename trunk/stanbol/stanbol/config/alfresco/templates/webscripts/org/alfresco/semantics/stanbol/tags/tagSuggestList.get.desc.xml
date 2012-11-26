@@ -1,0 +1,8 @@
+<webscript>
+   <shortname>Stanbol integration get tag suggestion list</shortname>
+   <description>Gets list of suggested semantic tags based on running Apache Stanbol on node content</description>
+   <url>/semantics/stanbol/tagSuggestList?noderef={nodeRef}</url>
+   <format default="xml"/>
+   <authentication>user</authentication>
+   <transaction>required</transaction>
+</webscript>

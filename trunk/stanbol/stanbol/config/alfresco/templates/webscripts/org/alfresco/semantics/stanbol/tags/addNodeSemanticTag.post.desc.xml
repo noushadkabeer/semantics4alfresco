@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Stanbol integration add semantic tag</shortname>
+  <description>Add an existing semantic tag to a node</description>
+  <url>/semantics/stanbol/addNodeSemanticTag?noderef={nodeRef}&amp;tagnoderef={tagNodeRef}</url>
+  <format default="xml"/>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

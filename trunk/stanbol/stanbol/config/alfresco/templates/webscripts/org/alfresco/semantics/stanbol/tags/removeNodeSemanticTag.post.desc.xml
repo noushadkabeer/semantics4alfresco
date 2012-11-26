@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Stanbol integration remove semantic tag</shortname>
+  <description>Remove semantic tag from a node</description>
+  <url>/semantics/stanbol/removeNodeSemanticTag?noderef={nodeRef}&amp;tagnoderef={tagNodeRef}</url>
+  <format default="xml"/>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>
